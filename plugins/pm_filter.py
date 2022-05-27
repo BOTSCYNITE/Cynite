@@ -414,16 +414,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('ᴍᴀɴᴜᴀʟ ғɪʟᴛᴇʀ', callback_data='manuelfilter'),
-            InlineKeyboardButton('ᴀᴜᴛᴏ ғɪʟᴛᴇʀ', callback_data='autofilter')
+            InlineKeyboardButton('⚚ ADD ME TO YOUR GROUP ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴs', callback_data='coct'),
-            InlineKeyboardButton('ᴇxᴛʀᴀ ᴍᴏᴅᴇs', callback_data='extra'),
-            InlineKeyboardButton('ᴄᴀʀʙᴏɴ', callback_data='carbon')
-            ],[
-            InlineKeyboardButton('🏠 ʜᴏᴍᴇ 🏠', callback_data='start'),
-            InlineKeyboardButton('⚚ sᴛᴀᴛs ⚚', callback_data='stats')
-        ]] 
+            InlineKeyboardButton('💠 CHANNEL 💠', url='https://t.me/technicalaks1'),
+            InlineKeyboardButton('💠 UPDATES 💠', url='https://t.me/Imdb_updates')
+            ],[      
+            InlineKeyboardButton('♻️ HELP ♻️', callback_data='help'),
+            InlineKeyboardButton('CONTACT ME', url='https://t.me/Aks_support01_bot'),
+            InlineKeyboardButton('♻️ ABOUT ♻️', callback_data='about')
+            ],[ InlineKeyboardButton('- Sᴇᴀʀᴄʜ Iɴʟɪɴᴇ-', switch_inline_query_current_chat=''), ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
